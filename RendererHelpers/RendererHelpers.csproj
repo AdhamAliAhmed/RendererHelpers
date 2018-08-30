@@ -2,6 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Adham Ali</Authors>
+    <Company />
+    <Description>Reduces the boiler plate code for custom renderers or effects in Xamarin.Forms</Description>
+    <Copyright>2018 Adham Ali</Copyright>
+    <PackageProjectUrl>https://github.com/AdhamAliAhmed/RendererHelpers</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/AdhamAliAhmed/RendererHelpers</RepositoryUrl>
+    <RepositoryType>Public Repository</RepositoryType>
+    <PackageTags>Xamarin, XamarinForms, CustomRenderers, Effects</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageId>RendererHelpers_AdhamAli</PackageId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>

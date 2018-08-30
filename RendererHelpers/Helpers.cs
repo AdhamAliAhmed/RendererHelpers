@@ -27,9 +27,9 @@ namespace RendererHelpers
             }
 
             //Compare type's bindable properties with the given bindable properties
-            foreach (var bindableProp in factors.Keys)
+            foreach (var bindableProp in factors.Keys.Select(bp => bp.PropertyName))
             {
-                if (!bindabels
+                if (!bindabels.Select(bp => bp.PropertyName)
                     .Contains(bindableProp))
                 {
                     throw new ArgumentException("All BindableProperty arguments must belong to the provided type");
