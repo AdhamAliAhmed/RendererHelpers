@@ -9,8 +9,8 @@ Following [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-
 
 ### Example using the traditional if\else approach:
 
-
-` protected override void OnElementPropertyChanged(PropertyChangedEventArgs args)
+```
+ protected override void OnElementPropertyChanged(PropertyChangedEventArgs args)
  {
     base.OnElementPropertyChanged(args);
     if (args.PropertyName == Effects.DropShadow.BlurRadiusProperty.PropertyName)
@@ -43,18 +43,20 @@ Following [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-
         UpdateOffset();
         UpdateShadowOpacity();
     } 
- }`
+ }
+ ```
  
 Using `RendererHelpers.HandlePropertyChanges` method you can achieve every thing you achieved using the if\else approach except using fewer lines of code. And more importantly, much more convenient.
  
  ### Example using the `RendererHelpers` approach:
  
- `protected override void OnElementPropertyChanged(PropertyChangedEventArgs args)
+ ```
+ protected override void OnElementPropertyChanged(PropertyChangedEventArgs args)
   {
   
     base.OnElementPropertyChanged(args);
     
-    RendererHelpers.Helpers.HandlePropertyChanges<Controls.DropShadowPanel>(args, new System.Collections.Generic.Dictionary<BindableProperty, System.Action>()
+    RendererHelpers.Helpers.HandlePropertyChanges<Controls.DropShadowPanel>(args, new    System.Collections.Generic.Dictionary<BindableProperty, System.Action>()
     {
     
       {Effects.DropShadow.OffsetXProperty, UpdateOffset },
@@ -65,7 +67,8 @@ Using `RendererHelpers.HandlePropertyChanges` method you can achieve every thing
       
     }, UpdateShadow); 
     
-   }`
+   }
+```
     
     
 ### Contributions 
